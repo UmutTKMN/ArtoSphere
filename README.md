@@ -1,6 +1,6 @@
 # ArtoSphere - Modern Sanat Galerisi
 
-![ArtoSphere Logo](images/favicon.png)
+![ArtoSphere Logo](assets/favicon.png)
 
 ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisidir. Unsplash API entegrasyonu ile farklı kategorilerdeki sanat eserlerini görüntülemenizi sağlar.
 
