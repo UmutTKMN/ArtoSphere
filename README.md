@@ -29,7 +29,7 @@ ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yeni
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/UmutTKMN/artosphere.git
+git clone [https://github.com/UmutTKMN/artosphere.git](https://github.com/UmutTKMN/ArtoSphere.git)
 ```
 
 2. Proje dizinine gidin:
