@@ -1,7 +1,7 @@
 # 🎨 ArtoSphere - Modern Sanat Galerisi
 
 <div align="center">
-  <img src="assets/favicon.png" alt="ArtoSphere Logo" width="800px">
+  <img src="assets/favicon.png" alt="ArtoSphere Logo" width="150px">
 </div>
 
 ## 📋 İçerik
