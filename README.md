@@ -1,22 +1,146 @@
-# ArtoSphere Galeri Projesi
+# ArtoSphere - Modern Sanat Galerisi
 
-Bu proje, kullanıcıların görselleri görüntüleyebileceği bir galeri web sitesi oluşturmak için tasarlanmıştır. Proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
+![ArtoSphere Logo](images/favicon.png)
 
-## Proje Yapısı
+ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisidir. Unsplash API entegrasyonu ile farklı kategorilerdeki sanat eserlerini görüntülemenizi sağlar.
 
-- `src/index.html`: Galeri sitesinin ana HTML belgesi. Web sayfasının yapısını içerir ve CSS ile JavaScript dosyalarına bağlantılar içerir.
-- `src/css/style.css`: Galeri sitesinin stillerini içeren dosya. Düzen, renkler, fontlar ve web sayfasının diğer görsel yönlerini tanımlar.
-- `src/js/script.js`: Galeri sitesinin JavaScript kodunu içeren dosya. Görseller için modalları açma ve kapama gibi etkileşimleri yönetir.
-- `src/assets/images`: Galeride kullanılan görsel dosyalarını tutmak için tasarlanmış dizin. Sitede görüntülenen görselleri içerir.
-- `.gitignore`: Git tarafından izlenmemesi gereken dosya ve dizinleri belirten dosya. Bu dosyalar, sürüm kontrolünde takip edilmez.
-- `README.md`: Proje hakkında belgeleri içeren dosya. Genel bakış, kurulum talimatları ve kullanıcılar veya geliştiriciler için diğer ilgili bilgileri içerir.
+## 🌟 Özellikler
 
-## Kurulum
+- 🎨 Modern ve responsive tasarım
+- 🔍 Gelişmiş arama ve filtreleme sistemi
+- 📱 Mobil uyumlu arayüz
+- 🖼️ Masonry grid layout
+- 🔄 Lazy loading desteği
+- ♿ Erişilebilirlik (ARIA) uyumlu
+- 🔒 Güvenli API entegrasyonu
+- 📝 İletişim formu
+- 🌐 SEO optimizasyonu
 
-1. Projeyi klonlayın veya indirin.
-2. `src/index.html` dosyasını bir tarayıcıda açarak projeyi görüntüleyin.
-3. Gerekli değişiklikleri yapmak için `src/css/style.css` ve `src/js/script.js` dosyalarını düzenleyin.
+## 🛠️ Teknolojiler
 
-## Katkıda Bulunma
+- HTML5
+- CSS3 (Modern özellikler ve animasyonlar)
+- JavaScript (ES6+)
+- Unsplash API
+- Font Awesome ikonları
+- Google Fonts (Inter)
 
-Herhangi bir katkıda bulunmak isterseniz, lütfen bir pull request oluşturun veya sorunları bildirin.
+## 📦 Kurulum
+
+1. Projeyi klonlayın:
+```bash
+git clone https://github.com/UmutTKMN/artosphere.git
+```
+
+2. Proje dizinine gidin:
+```bash
+cd artosphere
+```
+
+3. Unsplash API anahtarınızı `js/script.js` dosyasında güncelleyin:
+```javascript
+const config = {
+    UNSPLASH_API_KEY: 'sizin-api-anahtarınız',
+    UNSPLASH_API_URL: 'https://api.unsplash.com'
+};
+```
+
+4. `index.html` dosyasını bir web tarayıcısında açın.
+
+## 🎯 Kullanım
+
+### Ana Sayfa
+- Sanat eserlerini görüntüleme
+- Kategori filtreleme
+- Arama yapma
+- Eser detaylarını görüntüleme
+
+### Hakkında Sayfası
+- Şirket bilgileri
+- Ekip üyeleri
+- Misyon ve vizyon
+- Başarılar
+
+### İletişim Sayfası
+- İletişim formu
+- Konum bilgisi
+- İletişim detayları
+- Sosyal medya bağlantıları
+
+## 📱 Ekran Görüntüleri
+
+### Ana Sayfa
+![Ana Sayfa](images/screenshots/home.png)
+
+### Galeri
+![Galeri](images/screenshots/gallery.png)
+
+### Hakkında
+![Hakkında](images/screenshots/about.png)
+
+### İletişim
+![İletişim](images/screenshots/contact.png)
+
+## 🔒 Güvenlik
+
+- API anahtarı güvenli bir şekilde saklanır
+- XSS koruması
+- Form doğrulama
+- Güvenli HTTP bağlantıları
+
+## ♿ Erişilebilirlik
+
+- ARIA etiketleri
+- Klavye navigasyonu
+- Ekran okuyucu uyumluluğu
+- Yüksek kontrast oranları
+
+## 🔍 SEO
+
+- Meta etiketleri
+- Semantic HTML
+- Canonical URL'ler
+- Open Graph ve Twitter Card desteği
+
+## 📦 Proje Yapısı
+
+```
+artosphere/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── images/
+│   ├── logo.png
+│   ├── screenshots/
+│   └── gallery/
+└── README.md
+```
+
+## 🤝 Katkıda Bulunma
+
+1. Bu depoyu fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/yeniOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+## 📞 İletişim
+
+- Website: [kahrastudio.art](https://kahrastudio.art)
+- Email: info@kahrastudio.art
+- Twitter: [@kahrastudio](https://twitter.com/kahrastudio)
+- Instagram: [@kahrastudio](https://instagram.com/kahrastudio)
+
+## 🙏 Teşekkürler
+
+- [Unsplash](https://unsplash.com) - Görseller için
+- [Font Awesome](https://fontawesome.com) - İkonlar için
+- [Google Fonts](https://fonts.google.com) - Yazı tipleri için 

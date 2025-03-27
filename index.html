@@ -4,104 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtoSphere</title>
+    <title>ArtoSphere - Modern Sanat Galerisi</title>
+
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description"
+        content="ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisidir. Resim, fotoğraf ve dijital sanat eserlerini keşfedin.">
+    <meta name="keywords"
+        content="sanat galerisi, modern sanat, dijital sanat, resim, fotoğraf, sanat eserleri, online galeri">
+    <meta name="author" content="ArtoSphere">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="ArtoSphere - Modern Sanat Galerisi">
+    <meta property="og:description"
+        content="Modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisi.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://artosphere.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtoSphere - Modern Sanat Galerisi">
+    <meta name="twitter:description"
+        content="Modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisi.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://artosphere.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="main-nav">
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Ana menü">
             <h1>ArtoSphere</h1>
-            <button class="mobile-menu-btn" aria-label="Menü">
+            <button class="mobile-menu-btn" aria-label="Menüyü aç/kapat" aria-expanded="false"
+                aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <div class="nav-links">
-                <a href="index.html" class="active">Ana Sayfa</a>
-                <a href="about.html">Hakkında</a>
-                <a href="contact.html">İletişim</a>
+            <div class="nav-links" id="nav-links" role="menubar">
+                <a href="index.html" class="active" role="menuitem" aria-current="page">Ana Sayfa</a>
+                <a href="about.html" role="menuitem">Hakkında</a>
+                <a href="contact.html" role="menuitem">İletişim</a>
             </div>
         </nav>
     </header>
 
-    <div class="breadcrumb">
+    <div class="breadcrumb" aria-label="Sayfa konumu">
         <a href="index.html">Ana Sayfa</a>
-        <span>/</span>
+        <span aria-hidden="true">/</span>
         <span>Galeri</span>
     </div>
 
-    <div class="filters">
-        <input type="text" class="search-input" placeholder="Sanat eseri ara...">
-        <button class="filter-btn active" data-category="all">Tümü</button>
-        <button class="filter-btn" data-category="painting">Resim</button>
-        <button class="filter-btn" data-category="photo">Fotoğraf</button>
-        <button class="filter-btn" data-category="digital">Dijital</button>
+    <div class="filters" role="search" aria-label="Sanat eseri filtreleme">
+        <input type="text" class="search-input" placeholder="Sanat eseri ara..." aria-label="Sanat eseri arama">
+        <div class="filter-buttons" role="group" aria-label="Kategori filtreleri">
+            <button class="filter-btn active" data-category="all" aria-pressed="true">Tümü</button>
+            <button class="filter-btn" data-category="painting">Resim</button>
+            <button class="filter-btn" data-category="photo">Fotoğraf</button>
+            <button class="filter-btn" data-category="digital">Dijital</button>
+        </div>
     </div>
 
-    <main>
-        <div class="gallery" id="gallery">
-            <div class="loading-spinner"></div>
+    <main role="main">
+        <div class="gallery" id="gallery" role="grid" aria-label="Sanat eserleri galerisi">
+            <div class="loading-spinner" aria-label="Yükleniyor"></div>
         </div>
     </main>
 
-    <div id="modal" class="modal">
-        <span class="close">×</span>
-        <img class="modal-content" id="modal-img">
+    <div id="modal" class="modal" role="dialog" aria-label="Büyük görüntü" aria-hidden="true">
+        <span class="close" role="button" aria-label="Kapat">×</span>
+        <img class="modal-content" id="modal-img" alt="">
         <div id="caption"></div>
     </div>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Hakkımızda</h3>
                 <p>ArtoSphere, sanatı dijital dünyaya taşıyan modern bir sanat platformudur.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="footer-social" role="list">
+                    <a href="#" role="listitem" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" role="listitem" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" role="listitem" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" role="listitem" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Hızlı Bağlantılar</h3>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Galeri</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Sanatçılar</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Sergiler</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                <ul class="footer-links" role="list">
+                    <li role="listitem"><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i>Galeri</a>
+                    </li>
+                    <li role="listitem"><a href="#"><i class="fas fa-chevron-right"
+                                aria-hidden="true"></i>Sanatçılar</a></li>
+                    <li role="listitem"><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i>Sergiler</a>
+                    </li>
+                    <li role="listitem"><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i>Blog</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Kategoriler</h3>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-palette"></i>Resim</a></li>
-                    <li><a href="#"><i class="fas fa-camera"></i>Fotoğraf</a></li>
-                    <li><a href="#"><i class="fas fa-desktop"></i>Dijital Sanat</a></li>
-                    <li><a href="#"><i class="fas fa-video"></i>Video Sanat</a></li>
+                <ul class="footer-links" role="list">
+                    <li role="listitem"><a href="#"><i class="fas fa-palette" aria-hidden="true"></i>Resim</a></li>
+                    <li role="listitem"><a href="#"><i class="fas fa-camera" aria-hidden="true"></i>Fotoğraf</a></li>
+                    <li role="listitem"><a href="#"><i class="fas fa-desktop" aria-hidden="true"></i>Dijital Sanat</a>
+                    </li>
+                    <li role="listitem"><a href="#"><i class="fas fa-video" aria-hidden="true"></i>Video Sanat</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>İletişim</h3>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i>Kadıköy, İstanbul</a></li>
-                    <li><a href="#"><i class="fas fa-phone"></i>+90 212 345 67 89</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i>info@artosphere.com</a></li>
-                    <li><a href="#"><i class="fas fa-clock"></i>10:00 - 20:00</a></li>
+                <ul class="footer-links" role="list">
+                    <li role="listitem"><a href="#"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>Kadıköy,
+                            İstanbul</a></li>
+                    <li role="listitem"><a href="tel:+902123456789"><i class="fas fa-phone" aria-hidden="true"></i>+90
+                            212 345 67 89</a></li>
+                    <li role="listitem"><a href="mailto:info@artosphere.com"><i class="fas fa-envelope"
+                                aria-hidden="true"></i>info@artosphere.com</a></li>
+                    <li role="listitem"><i class="fas fa-clock" aria-hidden="true"></i>10:00 - 20:00</li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2023 ArtoSphere. Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Koşulları</a></p>
+            <p>&copy; 2023 ArtoSphere. Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a> | <a
+                    href="#">Kullanım Koşulları</a></p>
         </div>
     </footer>
 
