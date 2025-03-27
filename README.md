@@ -1,146 +1,151 @@
-# ArtoSphere - Modern Sanat Galerisi
+# 🎨 ArtoSphere - Modern Sanat Galerisi
 
-![ArtoSphere Logo](assets/favicon.png)
+<div align="center">
+  <img src="assets/favicon.png" alt="ArtoSphere Logo" width="800px">
+</div>
 
-ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisidir. Unsplash API entegrasyonu ile farklı kategorilerdeki sanat eserlerini görüntülemenizi sağlar.
+## 📋 İçerik
 
-## 🌟 Özellikler
+- [Proje Hakkında](#-proje-hakkında)
+- [Özellikler](#-özellikler)
+- [Ekran Görüntüleri](#-ekran-görüntüleri)
+- [Teknolojiler](#-teknolojiler)
+- [Kurulum](#-kurulum)
+- [API Kullanımı](#-api-kullanımı)
+- [Hata Giderme](#-hata-giderme)
+- [Lisans](#-lisans)
 
-- 🎨 Modern ve responsive tasarım
-- 🔍 Gelişmiş arama ve filtreleme sistemi
-- 📱 Mobil uyumlu arayüz
-- 🖼️ Masonry grid layout
-- 🔄 Lazy loading desteği
-- ♿ Erişilebilirlik (ARIA) uyumlu
-- 🔒 Güvenli API entegrasyonu
-- 📝 İletişim formu
-- 🌐 SEO optimizasyonu
+## 🖼️ Proje Hakkında
+
+ArtoSphere, modern ve klasik sanat eserlerini dijital platformda sergileyen yenilikçi bir sanat galerisidir. Unsplash API entegrasyonu sayesinde dünyanın dört bir yanından farklı kategorilerdeki sanat eserlerini görüntülemenizi sağlar.
+
+Masonry grid layout, gelişmiş filtreleme seçenekleri ve kullanıcı dostu arayüzü ile sanat deneyiminizi zenginleştirir. Mobil uyumlu tasarımı sayesinde dilediğiniz cihazdan kolayca erişebilirsiniz.
+
+## ✨ Özellikler
+
+- **🎨 Modern ve Responsive Tasarım**: Her ekran boyutuna uyumlu, şık ve kullanıcı dostu arayüz
+- **🔍 Gelişmiş Arama ve Filtreleme**: Sanat eserleri arasında kategoriye göre filtreleme ve arama
+- **📱 Mobil Uyumlu Arayüz**: Tablet ve akıllı telefonlarda sorunsuz deneyim
+- **🖼️ Masonry Grid Layout**: Estetik ve dinamik galeri görünümü
+- **🔄 Lazy Loading Desteği**: Hızlı sayfa yükleme ve optimize performans
+- **♿ Erişilebilirlik (ARIA)**: Ekran okuyucularla uyumlu, erişilebilir tasarım
+- **🔒 Güvenli API Entegrasyonu**: Unsplash API ile güvenli veri alışverişi
+- **📝 İletişim Formu**: Ziyaretçilerle kolay iletişim kurma imkanı
+- **🌐 SEO Optimizasyonu**: Arama motorlarında daha iyi görünürlük
+- **🌟 Eserlere Özel Modal Görünüm**: Eserleri detaylı inceleme imkanı
+- **📊 Galeri İstatistikleri**: Kategorilere göre eser dağılımlarını görüntüleme
+- **🔔 Sanat Etkinliği Bildirimleri**: Etkinliklerden haberdar olma özelliği
+
+## 📸 Ekran Görüntüleri
+
+<div align="center">
+  <img src="images/screenshots/home.png" alt="Ana Sayfa" width="600px">
+  <p><em>Ana Sayfa</em></p>
+  
+  <img src="images/screenshots/gallery.png" alt="Galeri" width="600px">
+  <p><em>Galeri ve Filtreleme Sistemi</em></p>
+  
+  <img src="images/screenshots/about.png" alt="Hakkında" width="600px">
+  <p><em>Hakkında Sayfası</em></p>
+  
+  <img src="images/screenshots/contact.png" alt="İletişim" width="600px">
+  <p><em>İletişim Sayfası</em></p>
+</div>
 
 ## 🛠️ Teknolojiler
 
-- HTML5
-- CSS3 (Modern özellikler ve animasyonlar)
-- JavaScript (ES6+)
-- Unsplash API
-- Font Awesome ikonları
-- Google Fonts (Inter)
+Bu projede aşağıdaki teknolojileri kullanıyoruz:
 
-## 📦 Kurulum
+- **Frontend**:
+  - HTML5 - Semantic yapı
+  - CSS3 - Modern özellikler ve animasyonlar
+  - JavaScript (ES6+) - İnteraktif kullanıcı deneyimi
+- **Tasarım**:
+  - Responsive Grid Layout
+  - Google Fonts (Inter)
+  - Font Awesome ikonları
+- **API**:
+  - [Unsplash API](https://unsplash.com/developers) - Görsel içerik
+
+## 🚀 Kurulum
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip edin:
+
+### Ön Koşullar
+
+- Modern bir web tarayıcısı (Chrome, Firefox, Safari, Edge)
+- Temel kod editörü (VS Code, Sublime Text vb.)
+- Unsplash API anahtarı
+
+### Adımlar
 
 1. Projeyi klonlayın:
-```bash
-git clone https://github.com/UmutTKMN/ArtoSphere.git
-```
 
-2. Proje dizinine gidin:
-```bash
-cd artosphere
-```
+   ```bash
+   git clone https://github.com/UmutTKMN/ArtoSphere.git
+   cd artosphere
+   ```
 
-3. Unsplash API anahtarınızı `js/script.js` dosyasında güncelleyin:
-```javascript
-const config = {
-    UNSPLASH_API_KEY: 'sizin-api-anahtarınız',
-    UNSPLASH_API_URL: 'https://api.unsplash.com'
-};
-```
+2. Unsplash API anahtarınızı `js/script.js` dosyasında güncelleyin:
 
-4. `index.html` dosyasını bir web tarayıcısında açın.
+   ```javascript
+   const config = {
+     UNSPLASH_API_KEY: "sizin-api-anahtarınız",
+     UNSPLASH_API_URL: "https://api.unsplash.com",
+   };
+   ```
 
-## 🎯 Kullanım
+3. `index.html` dosyasını bir web tarayıcısında açın. Yerel bir sunucu kullanmak isterseniz:
 
-### Ana Sayfa
-- Sanat eserlerini görüntüleme
-- Kategori filtreleme
-- Arama yapma
-- Eser detaylarını görüntüleme
+   ```bash
+   # Python ile basit bir HTTP sunucusu başlatabilirsiniz
+   python -m http.server 8000
+   ```
 
-### Hakkında Sayfası
-- Şirket bilgileri
-- Ekip üyeleri
-- Misyon ve vizyon
-- Başarılar
+4. Tarayıcınızda şu adresi açın: `http://localhost:8000`
 
-### İletişim Sayfası
-- İletişim formu
-- Konum bilgisi
-- İletişim detayları
-- Sosyal medya bağlantıları
+## 🔑 API Kullanımı
 
-## 📱 Ekran Görüntüleri
+Bu uygulama, görsel içerikleri çekmek için Unsplash API'sini kullanır. API kullanımıyla ilgili aşağıdaki noktalara dikkat edin:
 
-### Ana Sayfa
-![Ana Sayfa](images/screenshots/home.png)
+- Ücretsiz Unsplash API planı saatte 50 istek ile sınırlıdır
+- API anahtarınızı güvenli bir şekilde saklayın ve halka açık depolarda paylaşmayın
+- API ile çekilen görsellerin telif haklarına dikkat edin ve Unsplash'in kullanım koşullarına uyun
+- Üretim ortamında kullanıyorsanız, istek sınırlamalarını ve hata yönetimini göz önünde bulundurun
 
-### Galeri
-![Galeri](images/screenshots/gallery.png)
+## 🔧 Hata Giderme
 
-### Hakkında
-![Hakkında](images/screenshots/about.png)
+Sık karşılaşılan sorunlar ve çözümleri:
 
-### İletişim
-![İletişim](images/screenshots/contact.png)
+### API Bağlantı Hataları
 
-## 🔒 Güvenlik
+- API anahtarınızın doğru olduğundan emin olun
+- İnternet bağlantınızı kontrol edin
+- API kullanım limitinizi aşmadığınızdan emin olun
+- Tarayıcı konsolunda hata mesajlarını kontrol edin
 
-- API anahtarı güvenli bir şekilde saklanır
-- XSS koruması
-- Form doğrulama
-- Güvenli HTTP bağlantıları
+### Görüntü Yükleme Sorunları
 
-## ♿ Erişilebilirlik
+- Lazy loading scriptlerinin doğru çalıştığından emin olun
+- Görüntülerin dosya yollarını kontrol edin
+- Unsplash API'den gelen yanıtları tarayıcı konsolunda izleyin
 
-- ARIA etiketleri
-- Klavye navigasyonu
-- Ekran okuyucu uyumluluğu
-- Yüksek kontrast oranları
+### Filtre ve Arama Sorunları
 
-## 🔍 SEO
-
-- Meta etiketleri
-- Semantic HTML
-- Canonical URL'ler
-- Open Graph ve Twitter Card desteği
-
-## 📦 Proje Yapısı
-
-```
-artosphere/
-├── index.html
-├── about.html
-├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   ├── logo.png
-│   ├── screenshots/
-│   └── gallery/
-└── README.md
-```
-
-## 🤝 Katkıda Bulunma
-
-1. Bu depoyu fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/yeniOzellik`)
-3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
-4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
-5. Pull Request oluşturun
+- JavaScript konsolunda hata mesajlarını kontrol edin
+- Kategori ID'lerinin doğru tanımlandığından emin olun
+- Tarayıcı önbelleğini temizlemeyi deneyin
 
 ## 📄 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylı bilgi için [LICENSE](LICENSE) dosyasını inceleyebilirsiniz.
 
-## 📞 İletişim
+---
 
-- Website: [kahrastudio.art](https://kahrastudio.art)
-- Email: info@kahrastudio.art
-- Twitter: [@kahrastudio](https://twitter.com/kahrastudio)
-- Instagram: [@kahrastudio](https://instagram.com/kahrastudio)
-
-## 🙏 Teşekkürler
-
-- [Unsplash](https://unsplash.com) - Görseller için
-- [Font Awesome](https://fontawesome.com) - İkonlar için
-- [Google Fonts](https://fonts.google.com) - Yazı tipleri için 
+<div align="center">
+  <p>❤️ ile geliştirildi</p>
+  <p>
+    <a href="https://github.com/kahrastudio">GitHub</a> •
+    <a href="https://twitter.com/kahrastudio">Twitter</a>
+  </p>
+</div>
